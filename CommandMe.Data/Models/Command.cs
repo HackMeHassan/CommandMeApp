@@ -1,4 +1,4 @@
-﻿namespace CommandMe.Models
+﻿namespace CommandMe.Data.Models
 {
     public class Command
     {
@@ -7,8 +7,6 @@
 
         public string Line { get; set; }
         public string Platform { get; set; }
-
-
 
 
     }
