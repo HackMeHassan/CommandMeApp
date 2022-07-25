@@ -14,6 +14,7 @@ namespace CommandMe.Data.Mapper
         public CommandProfile()
         {
             CreateMap<Command, CommandReadDto>();
+            CreateMap<CommandWriteDto, Command>();
         }
     }
 }

@@ -50,5 +50,16 @@ namespace CommandMe.Controllers
             return NotFound();
         }
 
+        //POST
+        [HttpPost]
+        public ActionResult<CommandReadDto> CreateCommand (CommandWriteDto commandWriteDto)
+        {
+            //commmandModel is what we are going to put inside our database
+            var commandModel= _mapper.Map<Command>(commandWriteDto);
+            _commandMeRepo.CreateCommand(commandModel);
+            _commandMeRepo.SaveChanges();
+
+            return Ok(commandModel);
+        }
     }
 }
